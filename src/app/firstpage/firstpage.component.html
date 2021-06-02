@@ -1,0 +1,32 @@
+<div class="page-header" >
+    <h3 class="page-title"
+        style="font-size: x-large; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <span class="page-title-icon bg-gradient-primary text-white mr-1">
+            <i class="mdi mdi-upload" style="size: 100px;"></i>
+        </span>
+        UPLOAD
+    </h3>
+</div>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Upload Image Files for Testing Osteoporosis</h1>
+            <form class="forms-sample">                
+                <div class="form-group" >                   
+                    <input type="file" class="form-control" (change)="save($event)"
+                        multiple="multiple">                   
+                    <br>
+                    <span [innerHTML]="result"></span>
+                    <br>
+                    <button type="button" (click)="onUpload()" class="btn btn-gradient-primary">TEST</button>
+                    <br>
+                    <div class="alert alert-fill-primary" [hidden]="!submit" style="color: whitesmoke; margin-top: 10px; width:40%; text-align: center;" >   
+                        <!--<h4 style="margin-top: 20px;">IMAGE FILES UPLOADED SUCCESSFULLY!! </h4>-->
+                        <i class="mdi mdi-information-outline"></i>
+                        IMAGE FILES UPLOADED SUCCESSFULLY!!                                           
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

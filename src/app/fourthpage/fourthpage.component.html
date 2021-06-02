@@ -1,0 +1,58 @@
+<div class="page-header" >
+    <h3 class="page-title"
+        style="font-size: x-large; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <span class="page-title-icon bg-gradient-primary text-white mr-1">
+            <i class="mdi mdi-chart-histogram" style="size: 100px;"></i>
+        </span>
+        ANALYSE DATA
+    </h3>
+</div>
+<div class="row">
+    <div class="col-lg-7 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-wrap justify-content-between">
+            <h4 class="card-title">Comparative Analysis of Algorithms</h4>
+            <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal">
+              <ul>
+                <li>
+                  <span class="legend-dots"></span>C1
+                </li>
+                <li>
+                  <span class="legend-dots"></span>C2
+                </li>
+                <li class="mr-0">
+                  <span class="legend-dots"></span>C3
+                </li>
+              </ul>
+            </div>
+          </div>
+          <canvas baseChart #visitSaleChart [chartType]="'bar'" [datasets]="visitSaleChartData" [labels]="visitSaleChartLabels" [options]="visitSaleChartOptions" [colors]="visitSaleChartColors"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Maximum Accuracy</h4>
+            <canvas baseChart [chartType]="'bar'" [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [colors]="barChartColors"></canvas>
+            <div id="traffic-chart-legend" class="rounded-legend legend-vertical legend-bottom-left pt-4">
+              <ul>
+                <li>
+                  <span class="legend-dots"></span>YOLO
+                  <span class="float-right">95%</span>
+                </li>
+                <li>
+                  <span class="legend-dots"></span>BPN
+                  <span class="float-right">70%</span>
+                </li>
+                <li>
+                  <span class="legend-dots"></span>VGG 16
+                  <span class="float-right">89%</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>  
+</div>
